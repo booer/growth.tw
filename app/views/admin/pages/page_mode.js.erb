@@ -1,0 +1,12 @@
+(function(){
+	
+  var $loginForm = $('#work');
+  var $form = $('<%= j render 'page_mode' %>');
+
+  if ($loginForm.size() > 0) {
+    $loginForm.modal();
+  } else {
+    $('body').append($form);
+    $form.modal();
+  }
+})();

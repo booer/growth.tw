@@ -1,0 +1,25 @@
+<% if user_signed_in? %>
+<li class="dropdown dropdown-user">
+	<a class="dropdown-toggle" data-toggle="dropdown">
+		<img src="/assets/placeholder.jpg" alt="">
+		<span><%= current_user.nickname %></span>
+		<i class="caret"></i>
+	</a>
+
+	<ul class="dropdown-menu dropdown-menu-right">
+		<li><a href="#"><i class="icon-user-plus"></i> My profile</a></li>
+		<li><a href="#"><i class="icon-coins"></i> My balance</a></li>
+		<li><a href="#"><span class="badge bg-teal-400 pull-right">58</span> <i class="icon-comment-discussion"></i> Messages</a></li>
+		<li class="divider"></li>
+		<li><a href="#"><i class="icon-cog5"></i> Account settings</a></li>
+		<li>
+			<%= link_to destroy_user_session_path, method: :delete do %>
+			<i class="icon-switch2"></i> Logout
+      <% end %>
+		</li>
+	</ul>
+</li>
+<% else %>
+<!-- 未登入 -->
+<li><%= link_to 'Login', user_omniauth_authorize_path(:facebook) %></li>
+<% end %>

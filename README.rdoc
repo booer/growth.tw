@@ -1,0 +1,6 @@
+ windows環境開發
+請用文字介面cd到C:/Sites/底下，再git clone(複製)
+git clone git@github.com:growthtw/init_pjt.git
+
+先用文字介面移動(cd)到專案目錄底下，輸入 set SSL_CERT_FILE=C:\RailsInstaller\cacert.pem
+再啟動server，不然https的選項都會被抵擋

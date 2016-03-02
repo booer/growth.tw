@@ -1,0 +1,28 @@
+<%= bootstrap_form_for [:admin, @page] do |p| %>
+  <%= p.text_field :title, label: '!!這邊是輪播橫幅, 一句話形容自己(產品) -> fix換成上傳圖片' %>
+  <%= p.fields_for :descriptions do |desc| %>
+  3~5個特色描述
+	  <%= render 'description_fields', f: desc %>
+  <% end %>
+  <%= link_to_add_association '增加描述', p, :descriptions, class: 'btn btn-info' %>
+  <%= p.text_area :info_description, label: '詳述運作原理', class: 'textarea' %>
+
+  <%= p.fields_for :clients do |client| %>
+  見證奇蹟
+    <%= render 'client_fields', f: client %>
+  <% end %>
+  <%= link_to_add_association '增加案例', p, :clients, class: 'btn btn-info' %>
+  <div class="mode">
+    <% if params[:mode] == 'google' %>
+      <%= render 'google' %>
+    <% end %>
+    <% if params[:mode] == 'page' %>
+      <%= render 'landingpage' %>
+    <% end %>
+  </div>
+  <%= p.text_field :cta_sup, label: '輔助用語(讓人更安心點擊你的call to action(e.g.免費註冊、無效免費、7天鑑賞、無效退費、買貴退差....等)' %>
+  <%= p.submit '送出', class: 'btn btn-success' %>
+<% end %>
+<script type="text/javascript">
+  $('.textarea').wysihtml5({toolbar: { color: true } });
+</script>
