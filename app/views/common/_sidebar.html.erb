@@ -1,4 +1,4 @@
-Main sidebar -->
+<!-- Main sidebar -->
 <div class="sidebar sidebar-main sidebar-fixed">
 <div class="sidebar-content">
 
@@ -85,10 +85,11 @@ Main sidebar -->
 						<li>
 							<a href="#"><i class="icon-spinner3 spinner"></i> <span>營銷分析</span></a>
 							<ul class="hidden-ul" style="display: none;">
-								<li><a href="#">營銷分析</a></li>
-								<li><a href="#">用戶分析</a></li>
+								<li><%= link_to '營銷分析', info_path, remote: true %></li>
+								<li><%= link_to '用戶分析', info_path, remote: true %></li>
 							</ul>
 						</li>
+						<li><%= link_to '新增回饋', new_feedback_path %></li>
 					<% end %>
 				<% else %>
 				<li>

@@ -3,7 +3,10 @@
 	<!-- Content area -->
 	<div class="content">
 		<!-- Dashboard content -->
-		Growth Hack主題編輯中...
+		<% @feedbacks.each do |f| %>
+			<%= @abc %>
+		  <%= f.description %><hr>
+		<% end %>
 		<!-- /dashboard content -->
 	</div>
 	<!-- /content area -->

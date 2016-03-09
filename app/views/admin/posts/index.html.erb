@@ -3,7 +3,10 @@
 	<!-- Content area -->
 	<div class="content">
 		<!-- Dashboard content -->
-		Growth Hack主題編輯中...
+		<%= link_to 'new', new_admin_post_path %><hr>
+		<% @posts.each do |p| %>
+			<%= p.title %>
+		<% end %>
 		<!-- /dashboard content -->
 	</div>
 	<!-- /content area -->

@@ -1,5 +1,4 @@
-class Account::PagesController < ApplicationController
-	layout 'account'
+class Account::PagesController < Account::BaseController
 	def index
 		
 	end

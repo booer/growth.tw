@@ -1,4 +1,6 @@
 class PagesController < ApplicationController
+	respond_to :js, :html
+
 	def index
 		
 	end
@@ -16,6 +18,10 @@ class PagesController < ApplicationController
 			render :new
 		end
 	end
+	def info
+			
+	end
+
 	private
 	def params_pages
 		params.require(:page).permit(:title)

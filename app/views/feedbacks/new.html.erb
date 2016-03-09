@@ -3,7 +3,11 @@
 	<!-- Content area -->
 	<div class="content">
 		<!-- Dashboard content -->
-		Growth Hack主題編輯中...
+		<%= bootstrap_form_for @feedback do |f| %>
+		  <%= f.text_field :ftype %>
+		  <%= f.text_field :description %>
+		  <%= f.submit '送出', class: 'btn btn-success' %>
+		<% end %>
 		<!-- /dashboard content -->
 	</div>
 	<!-- /content area -->

@@ -1,6 +1,5 @@
 class Admin::PagesController < Admin::BaseController
 	# before_action 驗證是否完成基本設定
-	
 	respond_to :js, :html
 	def index
 		

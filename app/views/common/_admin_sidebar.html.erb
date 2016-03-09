@@ -60,18 +60,18 @@
 				</li>
 				<li class="navigation-header"><span>站務管理</span> <i class="icon-menu" title="Main pages"></i></li>
 				<li><a href="#"><i class="icon-spinner3 spinner"></i> <span>活動公告</span></a></li>
-				<li><a href="#"><i class="icon-spinner3 spinner"></i> <span>回饋管理</span></a></li>
+				<li><%= link_to admin_feedbacks_path do %><i class="icon-spinner3 spinner"></i> <span>回饋管理</span> <% end %></li>
 				<li>
-					<%= link_to posts_path do %>
+					<%= link_to admin_posts_path do %>
 						<i class="icon-home4"></i>例會紀錄<span></span>
 					<% end %>
 				</li>
 				<li>
-					<%= link_to topics_path do %>
+					<%= link_to admin_topics_path do %>
 						<i class="icon-home4"></i> <span>GrowthHack</span>
 					<% end %>
 				</li>
-				<li><%= link_to workshops_path do %><i class="icon-spinner3 spinner"></i> <span>實務工作坊</span><% end %></li>
+				<li><%= link_to admin_workshops_path do %><i class="icon-spinner3 spinner"></i> <span>實務工作坊</span><% end %></li>
 			</ul>
 		</div>
 	</div>

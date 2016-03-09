@@ -7,11 +7,14 @@ Rails.application.routes.draw do
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   get '/auth/:provider/callback', to: 'sessions#create'
 	# /
-  root 'pages#index'
+  root 'posts#index'
+  get 'info', to: 'pages#info', as: :info
+  
   resources :topics
   resources :workshops
   resources :posts
   resources :pages
+  resources :feedbacks
   # /admin
 	namespace :admin do
 	  root 'pages#index'
@@ -20,6 +23,7 @@ Rails.application.routes.draw do
 	  resources :posts
 	  resources :sites
 	  resources :pages
+	  resources :feedbacks
 	  get 'page_mode', to: 'pages#page_mode', as: :page_mode
 	end	
 end

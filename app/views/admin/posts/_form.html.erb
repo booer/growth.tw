@@ -1,0 +1,8 @@
+<%= bootstrap_form_for [:admin, @post] do |f| %>
+  <%= f.text_field :title, label: '文章標題' %>
+  <%= f.text_area :description, label: '詳述運作原理', class: 'textarea' %>
+  <%= f.submit '送出', class: 'btn btn-success' %>
+<% end %>
+<script type="text/javascript">
+  $('.textarea').wysihtml5({toolbar: { color: true } });
+</script>
